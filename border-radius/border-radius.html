@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<style>
+		/*圆角边框*/
+		div.border-radius{
+			height:100px;
+			width:200px;
+			border-radius:10px 20px 30px 40px;/*左上 右上 右下 左下 从左上开始顺时针的顺序*/
+			background-color: red;
+		}
+		/*怎么画圆*/
+		/*长和宽一样
+		border-radius等于长/宽的一半*/
+		div.circle{
+			height:100px;
+			width:100px;
+			border-radius:50px;
+			background-color: red;
+		}
+		/*上半实心圆*/
+		/*高度为宽度的一半，同时只设置左上，右上的border-radius宽度，左下和右下均为0*/
+		div.top-half-circle{
+			height:50px;
+			width:100px;
+			border-radius:50px 50px 0 0 ;
+			background-color: red;
+		}
+		/*下半实心圆*/
+		/*高度为宽度的一半，同时只设置左下，右下的border-radius宽度，左上和右上均为0*/
+		div.bottom-half-circle{
+			height:50px;
+			width:100px;
+			border-radius:0 0 50px 50px;
+			background-color: red;
+		}
+		div.shadow{
+			box-shadow:4px 2px 6px #f00, -4px -2px 6px #000, 0px 0px 12px 5px #33CC00 inset;
+			height: 100px;
+			width:200px;
+			border:solid 1px black;
+		}
+
+		div.border-image{
+			height:300px;
+			width:300px;
+			border:solid 20px;
+			border-image:url(border-image.jpg) 20 repeat;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- 圆形边框 -->
+	<div class="border-radius"></div>
+	<!-- 圆 -->
+	<div class="circle"></div>
+	<br>
+	<!-- 上半实心圆 -->
+	<div class="top-half-circle"></div>
+	<br>
+	<!-- 下半实心圆 -->
+	<div class="bottom-half-circle"></div>
+	<br>
+	<div class="shadow">
+	</div>
+	<br>
+	<div class="border-image">	
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>
